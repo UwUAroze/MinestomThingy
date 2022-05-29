@@ -18,7 +18,7 @@ public class MinestomThingy {
     public static void main(String[] args) {
 
 
-        System.out.println("Starting thingy...");
+        System.out.println("Starting thingy (and started timer)...");
         long startTime = System.currentTimeMillis();
 
         MinecraftServer minecraftServer = MinecraftServer.init();
