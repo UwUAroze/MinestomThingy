@@ -45,7 +45,7 @@ public class MinestomThingy {
 
         long startedTime = System.currentTimeMillis();
         long timeTaken = startedTime - startTime;
-        System.out.println("Started thingy in " + timeTaken/1000 + " seconds!");
+        System.out.println("Started thingy in " + timeTaken + "ms!");
 
     }
 }
