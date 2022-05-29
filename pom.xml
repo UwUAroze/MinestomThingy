@@ -19,6 +19,17 @@
             <id>jitpack</id>
             <url>https://jitpack.io</url>
         </repository>
+        <repository>
+            <id>sonatypeSnapshots</id>
+            <name>Sonatype Snapshots</name>
+            <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+            <releases>
+                <enabled>false</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
     </repositories>
 
     <dependencies>
@@ -33,6 +44,11 @@
                     <artifactId>shrinkwrap-resolver-depchain</artifactId>
                 </exclusion>
             </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>com.github.Articdive</groupId>
+            <artifactId>JNoise</artifactId>
+            <version>3.0.2</version>
         </dependency>
     </dependencies>
 
