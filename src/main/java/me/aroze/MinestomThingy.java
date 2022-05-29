@@ -25,7 +25,7 @@ public class MinestomThingy {
 
         JNoise noise = JNoise.newBuilder()
             .perlin()
-            .setFrequency(0.05) // Low frequency for smooth terrain
+            .setFrequency(0.02) // Low frequency for smooth terrain
             .build();
 
         MinecraftServer minecraftServer = MinecraftServer.init();
