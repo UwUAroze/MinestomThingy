@@ -25,12 +25,11 @@ public class MinestomThingy {
 
         // Create the instance
         InstanceContainer instanceContainer = instanceManager.createInstanceContainer();
+
+        // Set the ChunkGenerator
         instanceContainer.setGenerator(unit -> {
             unit.modifier().fillHeight(-50, 40, Block.STONE);
         });
-
-        // Set the ChunkGenerator
-        // later:tm: instanceContainer.setChunkGenerator(new ChunkGeneration());
 
         // Add an event callback to specify the spawning instance (and the spawn position)
         GlobalEventHandler globalEventHandler = MinecraftServer.getGlobalEventHandler();
