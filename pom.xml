@@ -26,7 +26,7 @@
         <dependency>
             <groupId>com.github.Minestom</groupId>
             <artifactId>Minestom</artifactId>
-            <version>VERSION</version>
+            <version>-SNAPSHOT</version>
             <exclusions>
                 <exclusion>
                     <groupId>org.jboss.shrinkwrap.resolver</groupId>
