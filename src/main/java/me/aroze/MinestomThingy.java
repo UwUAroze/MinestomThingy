@@ -36,7 +36,18 @@ public class MinestomThingy {
 
         // Set the ChunkGenerator
         instanceContainer.setGenerator(unit -> {
-            unit.modifier().fillHeight(-50, 40, Block.STONE);
+            Point start = unit.absoluteStart();
+            for (int x = 0; x < unit.size().x(); x++) {
+                for (int z = 0; z < unit.size().z(); z++) {
+                    Point bottom = start.add(x, 0, z);
+
+                    synchronized (noise) { // Synchronization is necessary for JNoise
+                        double height = noise.getNoise(bottom.x(), bottom.z()) * 16;
+                        // * 16 means the height will be between -16 and +16
+                        unit.modifier().fill(bottom, bottom.add(1, 0, 1).withY(height), Block.STONE);
+                    }
+                }
+            }
         });
 
         // Add an event callback to specify the spawning instance (and the spawn position)
