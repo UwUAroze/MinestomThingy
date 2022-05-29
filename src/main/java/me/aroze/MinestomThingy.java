@@ -19,6 +19,7 @@ public class MinestomThingy {
 
 
         System.out.println("Starting thingy...");
+        long startTime = System.currentTimeMillis();
 
         MinecraftServer minecraftServer = MinecraftServer.init();
         InstanceManager instanceManager = MinecraftServer.getInstanceManager();
@@ -42,7 +43,9 @@ public class MinestomThingy {
         // Start the server on port 25565
         minecraftServer.start("0.0.0.0", 25000);
 
-        System.out.println("Started thingy!");
+        long startedTime = System.currentTimeMillis();
+        long timeTaken = startedTime - startTime;
+        System.out.println("Started thingy in " + timeTaken/1000 + " seconds!");
 
     }
 }
