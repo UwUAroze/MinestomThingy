@@ -26,7 +26,7 @@ public class MinestomThingy {
         // Create the instance
         InstanceContainer instanceContainer = instanceManager.createInstanceContainer();
         instanceContainer.setGenerator(unit -> {
-            unit.modifier().fillHeight(0, 40, Block.STONE);
+            unit.modifier().fillHeight(-50, 40, Block.STONE);
         });
 
         // Set the ChunkGenerator
