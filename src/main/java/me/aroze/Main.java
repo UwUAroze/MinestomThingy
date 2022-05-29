@@ -7,8 +7,10 @@ public class Main {
 
 
         System.out.println("Starting thingy...");
+
         MinecraftServer minecraftServer = new MinecraftServer();
         minecraftServer.start("0.0.0.0", 25565);
+
         System.out.println("Started thingy!");
 
     }
