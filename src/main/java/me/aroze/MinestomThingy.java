@@ -24,7 +24,7 @@ public class MinestomThingy {
         long startTime = System.currentTimeMillis();
 
         JNoise noise = JNoise.newBuilder()
-            .fastSimplex()
+            .perlin()
             .setFrequency(0.005) // Low frequency for smooth terrain
             .build();
 
