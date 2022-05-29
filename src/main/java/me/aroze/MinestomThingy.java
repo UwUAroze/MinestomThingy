@@ -1,5 +1,6 @@
 package me.aroze;
 
+import de.articdive.jnoise.JNoise;
 import net.minestom.server.MinecraftServer;
 import net.minestom.server.coordinate.Point;
 import net.minestom.server.entity.GameMode;
@@ -21,6 +22,11 @@ public class MinestomThingy {
 
         System.out.println("Starting thingy (and started timer)...");
         long startTime = System.currentTimeMillis();
+
+        JNoise noise = JNoise.newBuilder()
+            .fastSimplex()
+            .setFrequency(0.005) // Low frequency for smooth terrain
+            .build();
 
         MinecraftServer minecraftServer = MinecraftServer.init();
         InstanceManager instanceManager = MinecraftServer.getInstanceManager();
