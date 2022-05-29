@@ -25,7 +25,7 @@ public class MinestomThingy {
 
         JNoise noise = JNoise.newBuilder()
             .perlin()
-            .setFrequency(0.02) // Low frequency for smooth terrain
+            .setFrequency(0.01) // Low frequency for smooth terrain
             .build();
 
         MinecraftServer minecraftServer = MinecraftServer.init();
@@ -44,7 +44,7 @@ public class MinestomThingy {
                     synchronized (noise) { // Synchronization is necessary for JNoise
                         double height = noise.getNoise(bottom.x(), bottom.z()) * 16;
                         // * 16 means the height will be between -16 and +16
-                        unit.modifier().fill(bottom, bottom.add(1, 0, 1).withY(height), Block.WHITE_CONCRETE);
+                        unit.modifier().fill(bottom, bottom.add(1, 0, 1).withY(height), Block.MAGENTA_TERRACOTTA);
                     }
                 }
             }
